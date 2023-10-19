@@ -1,0 +1,25 @@
+@import url('/css/global.css');
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  border: 1px solid #333;
+  padding: 8px;
+}
+
+th, tbody {
+  background-color: #FFF;
+}
+
+.status {
+  width: 100px;
+  text-align: center;
+}
+
+.observacao {
+  width: 600px;
+}

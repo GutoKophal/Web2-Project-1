@@ -1,0 +1,102 @@
+@import url('/css/global.css');
+
+.container {
+  max-width: 800px;
+  margin: 120px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-height: 600px;
+  overflow-y: auto;
+  border-radius: 15px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.ticket {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+.ticket h4 {
+  margin: 0;
+}
+
+.ticket p {
+  margin: 0;
+}
+
+.ticket small {
+  font-style: italic;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px
+}
+
+.support-select {
+  width: 60%;
+}
+
+#desassociar-suporte {
+  margin-top: 10px;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+
+  background-color: #D62828;
+  color: white;
+  cursor: pointer;
+}
+
+#associar {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#associar-suporte {
+  margin-top: 10px;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+
+  background-color: #089000;
+  color: white;
+  cursor: pointer;
+}
+
+#concluir-suporte {
+  margin-top: 10px;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+
+  background-color: #476EE2;
+  color: white;
+  cursor: pointer;
+}
+
+#observacao {
+  display: none;
+}
+
+#observacao button {
+  /* margin-top: 10px; */
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+
+  background-color: #089000;
+  color: white;
+  cursor: pointer;
+}
+

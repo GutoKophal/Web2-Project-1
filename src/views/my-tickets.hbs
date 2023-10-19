@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/css/my-tickets.css">
+</head>
+<body>
+  {{> navbar }}
+    <table>
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Descrição</th>
+                <th>Detalhe</th>
+                <th class="status">Status</th>
+                <th class="observacao">Observação</th>
+            </tr>
+        </thead>
+        <tbody>
+          {{#each tickets as |ticket|}}
+            <tr>
+                <td>{{ ticket.title }}</td>
+                <td>{{ ticket.description }}</td>
+                <td>{{ ticket.detail }}</td>
+                <td class="status">{{ ticket.status }}</td>
+                <td class="observacao">{{ ticket.observation }}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+    </table>
+</body>
+</html>

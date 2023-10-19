@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/tickets.css">
+</head>
+<body>
+  {{> navbar isTeam=isTeam isAdmin=isAdmin }}
+    <div class="container">
+        <h1>Tickets</h1>
+    {{#with allTickets as | item | }}
+        {{#each item.tickets as | ticket | }}
+            <div class="ticket">
+                    <h4 >{{ ticket.title }} - {{ ticket.id }}</h4>
+                    <p>{{ ticket.description }}</p>
+                    <small>Categoria: {{ ticket.category }}</small><br>
+                    <small>Status: {{ ticket.status }}</small>
+                {{#if ticket.isOpen }}
+                <div class="buttons">
+                    <div>
+                    {{#if ticket.isAdmin}}
+                    <select id="associar" class="support-select">
+                        <option value="selecionar">Selecionar Suporte</option>
+                        {{#each item.technicals as | technical | }}
+                            <option value="{{technical.id}}" id="teste">{{ technical.username }}</option>
+                        {{/each}}
+                    </select>
+                        <button id="associar-suporte" onclick="partner({{ticket.id}})">Associnar</button>
+                        <button id="desassociar-suporte" onclick="disassociate({{ticket.id}})">Desassociar</button>
+                        {{/if}}
+                    {{/if}}
+                    </div>
+                    {{#if ticket.open }}
+                    <button id="concluir-suporte" onclick="confirmSuport({{ticket.id}})">Concluir ticket</button>
+                        {{else}}
+                    <button id="concluir-suporte" onclick="reOpen({{ticket.id}})">Reabrir ticket</button>
+                    {{/if}}
+                </div>
+                <br>
+                <div id="observacao">
+                    <label for=""></label>
+                    <textarea id="observation" cols="80" rows="10" placeholder="Enviar observação para usuário.."></textarea><br>
+                </div>
+            </div>
+        {{/each}}
+     {{/with}}
+    </div>
+
+    <script src="/js/tickets.js"></script>
+</body>
+</html>
